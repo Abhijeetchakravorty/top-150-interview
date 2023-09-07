@@ -1,20 +1,18 @@
 class Solution:
-    def isValid(self, s: str) -> bool:
+    def validParantheses(self, s):
         lst = []
-        if s[0] not in ['(', '[', '{']:
-            return False
-        for bracket in s:
-            if bracket in ['(', '[', '{']:
-                lst.append(bracket)
-            elif len(lst) == 0:
-                return False                
+        newdict = {
+            "(": ")",
+            "[": "]",
+            "{": "}"
+        }
+        left = "({["
+        for i in s:
+            if i in left:
+                lst.append(newdict[i])
+            elif len(lst) > 0 and lst[-1]==i:
+                lst.pop()
             else:
-                opening = lst.pop()
-                if (opening == '(' and bracket == ')') or (opening == '[' and bracket == ']') or (opening == '{' and bracket == '}'):
-                    continue
-                else:
-                    return False
-        if len(lst) == 0:
-            return True
-        return False
-
+                return False
+        return not lst
+        

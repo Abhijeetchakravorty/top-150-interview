@@ -1,21 +1,21 @@
 class Solution:
-    def romanToInt(self, s: str) -> int:
-        symbolToIntDict = {
+    def romanToInt(self, s):
+        romanToIntDict = {
             "I": 1,
             "V": 5,
             "X": 10,
             "L": 50,
             "C": 100,
             "D": 500,
-            "M": 1000
+            "M": 1000,
         }
-        prevValue = symbolToIntDict["M"]
+        prevValue = romanToIntDict["M"]
         totalValue = 0
         for c in s:
-            currentValue = symbolToIntDict[c]
+            currentValue = romanToIntDict[c]
             if prevValue < currentValue:
-                totalValue -= prevValue * 2
+                totalValue -= prevValue*2
             totalValue += currentValue
             prevValue = currentValue
         return totalValue
-    
+            
