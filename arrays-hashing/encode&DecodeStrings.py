@@ -1,21 +1,24 @@
 class Solution:
     def encode(self, strs):
-        res = ''
-        for s in strs:
-            res += str(len(s)) + "#" + s
+        res = ""
+        for i in range(len(strs)):
+            res += str(len(strs[i]))+"#"+strs[i]
         return res
     
-    def decode(self, str):
+    def decode(self, string):
         res, i = [], 0
-        while i < len(str):
+        while i < len(string):
             j = i
-            while str[j] != "#":
+            while string[j] != "#":
                 j += 1
-            length = int(str[i:j])
-            res.append(str[j+1: j+1+length])
-            i = j + 1 + length
+            length = int(string[i:j])
+            print("I:J", i, j, length, string[i:j])
+            res.append(string[j+1:j+1+length])
+            i = j+1+length
         return res
 
+            
+ 
 
 a = Solution()
 b = a.encode(["abhijeetchakravorty", "neet", "code"])
