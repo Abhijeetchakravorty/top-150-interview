@@ -1,19 +1,13 @@
 class Solution:
-    def twoSum(self, numbers, target: int):
+    def twoSum2(self, nums, target):
         left = 0
-        right = len(numbers)-1
-        while left < right:
-            curSum = numbers[left] + numbers[right]
+        right = len(nums)-1
+        while left <= right:
+            curSum = nums[left]+nums[right]
             if curSum < target:
-                left = left + 1
+                left += 1
             elif curSum > target:
-                right = right - 1
+                right -= 1
             else:
-                return [left+1, right+1]
+                return [1+left, 1+right]
         return []
-            
-a = Solution()
-b = a.twoSum([2,7,11,15], 9)
-print(b)
-b = a.twoSum([2,3,4], 6)
-print(b)
