@@ -1,10 +1,7 @@
 class Solution:
         def generateParanthesis(self, n):
             res = []
-            count = 0
             def dfs(left, right, s):
-                nonlocal count
-                
                 if right==n:
                     res.append(s)
                 else:
