@@ -19,6 +19,8 @@ class Solution:
 
         return result
 
+# Time Complexity: O(N * log(max(piles)))
+# Space Complexity: O(1)
 
 
 a = Solution()
