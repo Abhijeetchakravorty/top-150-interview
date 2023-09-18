@@ -15,4 +15,5 @@ class Solution:
 
 
 a = Solution()
-b = a.characterReplacement("AABABBA", 1)
+b = a.characterReplacement("ABABBA", 2)
+print("B: ", b)
