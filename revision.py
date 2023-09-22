@@ -1,33 +1,24 @@
 class Solution:
-    def search(self, matrix, target):
-        ROWS, COLS = len(matrix), len(matrix[0])
+    def longestSubstringWithoutRepeatingChars(self, s):        
+        newDict = dict()
+        longest = start = 0
+        for i, v in enumerate(s):
+            if v in newDict and newDict[v] >= start:
+                start = newDict[v]+1
+                
+            newDict[v] = i
+
+            if longest < i - start + 1:
+                longest = i - start + 1
         
-        top, bot = 0, ROWS-1
-        
-        while top <= bot:
-            row = top+bot//2
-            if target > matrix[row][-1]:
-                top = row + 1
-            elif target < matrix[row][0]:
-                bot = bot - 1
-            else:
-                break
-        
-        if not (top <= bot):
-            return False
+        return longest
             
-        row = top+bot // 2
-        l, r = 0 , COLS-1
-        while l <= r:
-            m = l+r // 2
-            if target > matrix[row][m]:
-                l = m+1
-            elif target < matrix[row][m]:
-                r = m-1
-            else: 
-                return True
-        return False
+
+
 
 a = Solution()
-b = a.search([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 3)
+b = a.longestSubstringWithoutRepeatingChars("abcdeabcdefgh")
+print("Ans: ", b)
+
+b = a.longestSubstringWithoutRepeatingChars(" ")
 print("Ans: ", b)
