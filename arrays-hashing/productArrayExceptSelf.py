@@ -1,5 +1,7 @@
 class Solution:
     def productOfArrayExceptSelf(self, nums):
+        #time complexity : O(n)
+        #space complexity: O(n)
         res = [1]*len(nums)
         prefix = 1
         postfix = 1

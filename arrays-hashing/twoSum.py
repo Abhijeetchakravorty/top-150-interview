@@ -1,6 +1,7 @@
 class Solution:
     def twoSum(self, nums, target):
-        print("Nums: ", nums)
+        #time complexity : O(n)
+        #space complexity: O(n)
         numMap = dict()
         for i in range(len(nums)):
             complement = target - nums[i]

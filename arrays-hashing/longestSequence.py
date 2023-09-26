@@ -1,5 +1,7 @@
 class Solution:
     def longestConsecutive(self, nums):
+        #Time Complexity : O(n)
+        #Space Complexity: O(n)
         num_set = set(nums)
         res = 0
         for n in num_set:

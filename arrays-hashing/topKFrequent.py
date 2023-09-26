@@ -31,6 +31,8 @@
 
 class Solution:
     def topKFrequentElements(self, nums, k):
+        #time complexity : O(n)
+        #space complexity: O(n) 
         freq = [[] for j in range(len(nums)+1)]
         item = dict()
         res = []

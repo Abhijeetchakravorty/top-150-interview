@@ -1,6 +1,8 @@
 from collections import defaultdict
 class Solution:
     def validSudoku(self, board):
+        #time complexity : O(1)
+        #space complexity: O(1)
         rows = defaultdict(set)
         cols = defaultdict(set)
         squares = defaultdict(set)

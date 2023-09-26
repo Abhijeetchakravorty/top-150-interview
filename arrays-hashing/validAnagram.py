@@ -1,5 +1,5 @@
 class Solution:
-    # Time complexity: O(n)
+    # Time complexity: O(1)
     # Space complexity: O(n)
     def validAnagram(self, s, t):
         if len(s) != len(t):
