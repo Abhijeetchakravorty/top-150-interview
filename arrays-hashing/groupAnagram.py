@@ -1,13 +1,5 @@
 from collections import defaultdict
 class Solution:
-    def validAnagram(self, p, q):
-        if len(p) != len(q):
-            return False
-        for idx in set(p):
-            if p.count(idx) != q.count(idx):
-                return False
-        return True
-    
     def groupAnagram(self, strs):
         res = defaultdict(list)
         for s in strs:
