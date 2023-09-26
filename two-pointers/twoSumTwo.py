@@ -1,5 +1,7 @@
 class Solution:
     def twoSum2(self, nums, target):
+        # Time Complexity :  O(n)
+        # Space Complexity:  O(1)
         left = 0
         right = len(nums)-1
         while left < right:

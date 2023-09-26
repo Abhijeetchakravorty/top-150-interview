@@ -1,5 +1,7 @@
 class Solution:
     def dailyTemperatures(self, temperatures):
+        # Time Complexity  : O(n) 
+        # Space Complexity : O(n)
         res = [0]*len(temperatures)
         stack = []
         for i, t in enumerate(temperatures):

@@ -1,5 +1,7 @@
 class Solution:
     def evalRPN(self, tokens):
+        # Time Complexity : O(n)	
+        # Space Complexity: O(n)
         stack = []
         for token in tokens:
             if token not in "+-*/":

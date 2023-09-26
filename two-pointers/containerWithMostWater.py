@@ -1,5 +1,7 @@
 class Solution:
     def maxArea(self, height) -> int:
+        # Time complexity : O(n)
+        # Space complexity: O(1)
         l, r = 0, len(height)-1
         res = 0
         while l < r:

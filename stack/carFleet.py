@@ -1,7 +1,8 @@
 class Solution:
     def carFleet(self, target, position, speed):
+        # Time Complexity : O(n log n)
+        # Space Complexity: O(n)
         pair = [(p, s) for p, s in zip(position, speed)]
-        print("Pair: ", pair)
         stack = []
         a = sorted(pair)[::-1]
         print("A: ", a)

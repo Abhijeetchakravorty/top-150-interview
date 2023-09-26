@@ -1,5 +1,7 @@
 class Solution:
     def isPalindrome(self, s):
+        # Time Complexity : O(n)
+        # Space Complexity: O(n) 
         nospace = ("".join(filter(str.isalnum, s))).lower()
         return nospace == nospace[::-1]
     #     l, r = 0, len(s)-1

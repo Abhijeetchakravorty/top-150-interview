@@ -1,5 +1,7 @@
 class Solution:
         def generateParanthesis(self, n):
+            # Time Complexity: O(2^n)
+            # Space Complexity: O(2^n)
             res = []
             def dfs(left, right, s):
                 if right==n:

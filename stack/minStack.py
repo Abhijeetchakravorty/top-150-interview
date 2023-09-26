@@ -1,5 +1,9 @@
 class MinStack:
-
+    # Time Complexity: operations 
+    # (push, pop, top, 
+    # and getMin) 
+    # is O(1)	
+    # Space Complexity: O(n)
     def __init__(self):
         self.stack = []
         self.minStack = []

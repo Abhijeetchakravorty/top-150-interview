@@ -1,5 +1,7 @@
 class Solution:
     def largestRectangleArea(self, heights):
+        # Time Complexity : O(n)
+        # Space Complexity: O(n)
         maxArea = 0
         stack = []
         for i, h in enumerate(heights):

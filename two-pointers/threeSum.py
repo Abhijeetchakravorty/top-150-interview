@@ -1,6 +1,7 @@
 class Solution:
-    #formula for adding all the nums
     def threeSum(self, nums):
+        # Time Complexity : O(n^2)
+        # Space Complexity: O(n^2)
         res = []
         nums.sort()
 

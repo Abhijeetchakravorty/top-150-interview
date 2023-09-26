@@ -1,5 +1,7 @@
 class Solution:
     def validParantheses(self, s):
+        # Time Complexity : O(n)	
+        # Space Complexity: O(n)
         stack = []
         closeToOpen = { ")": "(", "]": "[", "}": "{"}
 
