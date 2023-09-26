@@ -1,18 +1,7 @@
 class Solution:
-    def rotateRight(self, nums):
-        count = 4
-        tempCount = 0
-        i = 0
-        while i < count:
-            temp = nums.pop()
-            nums.insert(0, temp)
-            i+=1
-            tempCount += 1
-            if (tempCount >= count):
-                break
-        return nums
-
     def findMin(self, nums):
+        # Time Complexity : O(log n)	
+        # Space Complexity: O(1)
         res = nums[0]
         l, r = 0, len(nums) - 1
         while l <= r:

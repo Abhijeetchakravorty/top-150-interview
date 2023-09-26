@@ -1,4 +1,6 @@
 class TimeMap:
+    # Time Complexity : O(log n)
+    # Space Complexity: O(log n)
     def __init__(self):
         self.store = {}
 

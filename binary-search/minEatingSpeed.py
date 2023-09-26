@@ -1,6 +1,8 @@
 #Koko eating bananas
 class Solution:
     def minEatingSpeed(self, piles, h):
+        # Time Complexity : O(n*log(max(piles)))
+        # Space Complexity: O(1)
         left, right = 1, max(piles)
         result = right
 
@@ -9,7 +11,8 @@ class Solution:
             hours = 0
 
             for pile in piles:
-                hours += (pile + mid - 1) // mid  # No need for math.ceil, use integer division
+                hours += (pile + mid - 1) // mid  
+                # No need for math.ceil, use integer division
 
             if hours <= h:
                 result = min(result, mid)
@@ -19,7 +22,7 @@ class Solution:
 
         return result
 
-# Time Complexity: O(N * log(max(piles)))
+# Time Complexity : O(N * log(max(piles)))
 # Space Complexity: O(1)
 
 

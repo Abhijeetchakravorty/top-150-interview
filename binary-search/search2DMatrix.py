@@ -1,5 +1,7 @@
 class Solution:
     def search2DMatrix(self, matrix, target: int) -> bool:
+        # Time Complexity : O(log m + log n)	
+        # Space Complexity: O(1)
         ROWS, COLS = len(matrix), len(matrix[0])
 
         top, bot = 0, ROWS - 1

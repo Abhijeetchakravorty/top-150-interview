@@ -1,5 +1,7 @@
 class Solution:
     def search(self, nums, target):
+        # Time Complexity : O(log n) 
+        # Space Complexity: O(1)
         l = 0
         r = len(nums)-1
 
