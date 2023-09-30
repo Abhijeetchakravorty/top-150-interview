@@ -1,6 +1,8 @@
 import collections
 class Solution:
     def maxSlidingWindow(self, nums, k):
+        # Time Complexity : O(n) 
+        # Space Complexity: O(n)
         output = []
         q = collections.deque()  # index
         l = r = 0

@@ -1,5 +1,7 @@
 class Solution:
     def characterReplacement(self, s, k):
+        # Time Complexity : O(n)
+        # Space Complexity: O(m)
         counts = {}
         maxf = 0
         l = 0

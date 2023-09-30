@@ -1,5 +1,7 @@
 class Solution:
     def maxProfit(self, prices):
+        # Time Complexity : O(n)
+        # Space Complexity: O(1)
         curMin, profit = -1, 0
         for price in prices:
             if curMin == -1:

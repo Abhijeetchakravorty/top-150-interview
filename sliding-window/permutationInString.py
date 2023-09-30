@@ -1,5 +1,7 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
+        # Time Complexity : O(len(s2)) 
+        # Space Complexity: O(1)
         if len(s1) > len(s2): return False
         
         

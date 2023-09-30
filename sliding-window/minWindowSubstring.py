@@ -1,5 +1,7 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
+        # Time Complexity : O(len(s)) 
+        # Space Complexity: O(1)
         if t == "":
             return ""
 
