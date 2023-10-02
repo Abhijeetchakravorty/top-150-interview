@@ -5,6 +5,8 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    #Time Complexity : O(n)
+    #Space Complexity: O(n)
     def diameterOfBinaryTree(self, root) -> int:
         res = 0
 
