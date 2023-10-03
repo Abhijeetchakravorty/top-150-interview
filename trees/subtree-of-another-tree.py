@@ -4,19 +4,21 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
+# Time Complexity can be improved to O(n+m)
 class Solution:
+    # Time Complexity : O(n*m)  
+    # Space Complexity: O(n)
     def isSubtree(self, s, t) -> bool:
-        # Time Complexity : O(n*m)  
-        # Space Complexity: O(n)
-        # Base case: If t is an empty tree, it's considered a subtree of any tree.
+        # Base case: If t is an empty tree, 
+        # it's considered a subtree of any tree.
         if not t:
             return True
         # If s is empty but t is not, t cannot be a subtree.
         if not s:
             return False
 
-        # Check if the current s and t trees are the same. If they are, t is a subtree of s.
+        # Check if the current s and t trees are the same. 
+        # If they are, t is a subtree of s.
         if self.sameTree(s, t):
             return True
 
@@ -24,7 +26,8 @@ class Solution:
         return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
 
     def sameTree(self, s, t):
-        # Base case: If both s and t are empty trees, they are considered the same.
+        # Base case: If both s and t are empty trees, 
+        # they are considered the same.
         if not s and not t:
             return True
         # If s and t are non-empty and their root values are equal,
