@@ -4,7 +4,9 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+    # Time Complexity :  O(n)
+    # Space Complexity: O(1)
+    def removeNthFromEnd(self, head, n: int):
         fast = slow = head
         for _ in range(n):
             fast = fast.next

@@ -4,6 +4,8 @@ class ListNode:
         self.next = None
 
 class Solution:
+    # Time Complexity : O(m+n)
+    # Space Complexity: O(1)
     def mergeSortedList(self, l1, l2):
         out = head = ListNode()
         while l1 and l2:

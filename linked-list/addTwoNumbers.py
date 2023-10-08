@@ -5,6 +5,8 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
+    # Time Complexity : O(max(m, n)) 
+    # Space Complexity: O(max(m, n)) 
     def addTwoNumbers(self, l1, l2):
         result_tail = ListNode()
         result = result_tail

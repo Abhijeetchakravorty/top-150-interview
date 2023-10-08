@@ -3,6 +3,8 @@
 #         self.val = val
 #         self.next = None
 class Solution:
+    # Time Complexity : O(n)
+    # Space Complexity: O(1)
     def reorderList(self, head):
         if not head:
             return None
