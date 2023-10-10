@@ -1,7 +1,7 @@
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = None
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = None
 class Solution:
     # Time Complexity : O(n)
     # Space Complexity: O(1)
@@ -39,12 +39,22 @@ class Solution:
             first = temp1
             second = temp2 
 
+    def printList(self, head):
+        while head:
+            print(head.val)
+            head = head.next
 
             
             
         
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
+
 
 
 a = Solution()
-b = a.reorderList([1,2,3,4,5])
-print("Ans: ", b)
+a.reorderList(head)
+a.printList(head)
