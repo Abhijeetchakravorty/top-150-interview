@@ -40,17 +40,3 @@ class Solution:
             cur = cur.next
             k -= 1
         return cur  # Return the kth node or None if not enough nodes.
-
-    # Helper function to reverse a singly-linked list.
-    def reverse_list(self, head):
-        if not head or not head.next:
-            return head  # Return the original list if it's empty or has only one element.
-
-        prev, cur = None, head
-        while cur:
-            nxt = cur.next  # Store the next node to avoid losing the reference.
-            cur.next = prev  # Reverse the current node's next pointer.
-            prev = cur
-            cur = nxt
-
-        return prev  # Return the new head of the reversed list.
