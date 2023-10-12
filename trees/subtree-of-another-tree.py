@@ -6,8 +6,8 @@
 #         self.right = right
 # Time Complexity can be improved to O(n+m)
 class Solution:
-    # Time Complexity : O(n*m)  
-    # Space Complexity: O(n)
+    # Time Complexity : O(s*t)  
+    # Space Complexity: O(s)
     def isSubtree(self, s, t) -> bool:
         # Base case: If t is an empty tree, 
         # it's considered a subtree of any tree.
