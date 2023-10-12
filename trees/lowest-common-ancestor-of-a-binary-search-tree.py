@@ -6,7 +6,7 @@
 #         self.right = None
 
 class Solution:
-    # Time Complexity : O(h) 
+    # Time Complexity : O(h->log n) 
     # Space Complexity: O(1)
     def lowestCommonAncestor(self, root, p, q):
         while True:
