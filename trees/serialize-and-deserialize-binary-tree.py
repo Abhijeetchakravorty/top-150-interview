@@ -5,8 +5,8 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
-
-class Codec:
+class Codec: 
+    # Serialize and Deserialize-binary-tree
     # Time Complexity : O(N)
     # Space Complexity: O(N)
     def serialize(self, root):
@@ -22,7 +22,7 @@ class Codec:
 
         dfs(root)
         return ",".join(res)
-
+    
     # Time Complexity : O(N)
     # Space Complexity: O(N)
     def deserialize(self, data):
