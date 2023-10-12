@@ -6,8 +6,8 @@
 #         self.right = None
 
 class Solution:
-    # Time Complexity : O(n)
-    # Space Complexity: O(n)
+    # Time Complexity : O(n=>p+q)
+    # Space Complexity: O(n=>p+q)
     def isSameTree(self, p, q) -> bool:
         # Base case: If both trees are empty, they are considered the same.
         if not p and not q:
