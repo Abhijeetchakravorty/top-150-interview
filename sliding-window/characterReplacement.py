@@ -8,7 +8,8 @@ class Solution:
         for r, ch in enumerate(s):
             counts[ch] = 1 + counts.get(ch, 0)
             maxf = max(maxf, counts[ch])
-            if maxf + k < r - l + 1:
+            #WindowLen - maxFrequency > k
+            if (r - l + 1) - maxf > k:
                 counts[s[l]] -= 1
                 l += 1
 
