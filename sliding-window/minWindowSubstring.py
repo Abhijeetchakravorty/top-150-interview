@@ -20,7 +20,6 @@ class Solution:
                 have += 1
 
             while have == need:
-                print("R: ", r, l)
                 # update our result
                 if (r - l + 1) < resLen:
                     res = [l, r]
