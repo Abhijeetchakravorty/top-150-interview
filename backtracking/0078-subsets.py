@@ -1,7 +1,8 @@
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    # Time Complexity : O(2^n)
+    # Space Complexity: O(2^n)
+    def subsets(self, nums):
         res = []
-
         subset = []
 
         def dfs(i):
