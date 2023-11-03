@@ -32,3 +32,8 @@ class Solution:
         # of characters and they match, 
         # it's a palindrome
         return True
+
+
+a = Solution()
+b = a.isPalindrome("A man, a plan, a canal: Panama")
+print("Ans: ", b)
