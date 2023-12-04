@@ -6,34 +6,23 @@ To do: Given an integer array nums,
     and nums[i] + nums[j] + nums[k] == 0.
 */
 var threeSum = function (nums) {
-    nums.sort();
-    // console.log(nums);
+    nums.sort((a, b) => a - b);
     const arr = [];
-    for (let i = 0; i < nums.length; i++) {
+    for ([i, a] of nums.entries()) {
         // console.log(nums[i]);
-        if (i > 0 && nums[i] == nums[i - 1]) {
-            continue;
-        }
+        if (i > 0 && a == nums[i - 1]) continue;
         let l = i + 1;
         let r = nums.length - 1;
-        while (l <= r) {
-            console.log(i, l, r);
-            let curSum = nums[i] + nums[l] + nums[r];
-            console.log(curSum);
-            if (curSum > 0) {
+        while (l < r) {
+            let threeSum = a + nums[l] + nums[r];
+            if (threeSum > 0) {
                 r -= 1;
-            }
-
-            if (curSum < 0) {
+            } else if (threeSum < 0) {
                 l += 1;
-            }
-            if (curSum === 0) {
-                arr.push([nums[i], nums[l], nums[r]]);
-                while (l <= r) {
-                    if (nums[l + 1] !== nums[l]) {
-                        l += 1;
-                    }
-                }
+            } else {
+                arr.push([a, nums[l], nums[r]]);
+                l += 1;
+                while (nums[l] === nums[l - 1] && l < r) l += 1;
             }
         }
     }
