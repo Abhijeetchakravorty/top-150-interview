@@ -18,4 +18,4 @@ var twoSum = function (numbers, target) {
     return [];
 };
 
-console.log(twoSum([2, 7, 11, 15], 9));
+// console.log(twoSum([2, 7, 11, 15], 9));
