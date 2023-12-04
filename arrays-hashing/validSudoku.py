@@ -1,54 +1,29 @@
 from collections import defaultdict
+
+
 class Solution:
     def validSudoku(self, board):
-        #time complexity : O(1)
-        #space complexity: O(1)
+        # time complexity : O(1)
+        # space complexity: O(1)
         rows = defaultdict(set)
         cols = defaultdict(set)
         squares = defaultdict(set)
-        
+
         for r in range(9):
             for c in range(9):
-                if board[r][c]==".":
+                if board[r][c] == ".":
                     continue
-                if(
-                    board[r][c] in rows or
-                    board[r][c] in cols or
-                    board[r][c] in squares[(r//3, c//3)]
+                if (
+                    board[r][c] in rows
+                    or board[r][c] in cols
+                    or board[r][c] in squares[(r // 3, c // 3)]
                 ):
                     return False
                 rows[r].add(board[r][c])
                 cols[c].add(board[r][c])
-                squares[(r//3, c//3)].add(board[r][c])
+                squares[(r // 3, c // 3)].add(board[r][c])
+        print(rows)
         return True
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # class Solution:
@@ -56,7 +31,7 @@ class Solution:
 #         rows = collections.defaultdict(set)
 #         cols = collections.defaultdict(set)
 #         squares = collections.defaultdict(set)
-        
+
 #         for r in range(9):
 #             for c in range(9):
 #                 if board[r][c] == ".":
@@ -74,13 +49,17 @@ class Solution:
 
 
 a = Solution()
-b = a.validSudoku([["5","3",".",".","7",".",".",".","."]
-,["6",".",".","1","9","5",".",".","."]
-,[".","9","8",".",".",".",".","6","."]
-,["8",".",".",".","6",".",".",".","3"]
-,["4",".",".","8",".","3",".",".","1"]
-,["7",".",".",".","2",".",".",".","6"]
-,[".","6",".",".",".",".","2","8","."]
-,[".",".",".","4","1","9",".",".","5"]
-,[".",".",".",".","8",".",".","7","9"]])
+b = a.validSudoku(
+    [
+        ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+        ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+        [".", "9", "8", ".", ".", ".", ".", "6", "."],
+        ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+        ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+        [".", "6", ".", ".", ".", ".", "2", "8", "."],
+        [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+    ]
+)
 print("Valid Sudoku: ", b)

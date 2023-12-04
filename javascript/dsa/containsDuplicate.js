@@ -1,0 +1,7 @@
+var containsDuplicate = function (nums) {
+    // console.log(new Set(nums);
+    if (nums.length > new Set(nums).size) return true;
+    return false;
+};
+
+console.log(containsDuplicate([1, 2, 3, 1]));
