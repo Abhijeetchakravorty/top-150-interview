@@ -2,10 +2,10 @@ class Solution:
     def maxArea(self, height) -> int:
         # Time complexity : O(n)
         # Space complexity: O(1)
-        l, r = 0, len(height)-1
+        l, r = 0, len(height) - 1
         res = 0
         while l < r:
-            area = (r-l) * min(height[l], height[r])
+            area = (r - l) * min(height[l], height[r])
             res = max(res, area)
             if height[l] < height[r]:
                 l += 1
@@ -15,5 +15,5 @@ class Solution:
 
 
 a = Solution()
-b = a.maxArea([1,8,6,2,5,4,8,3,7])
+b = a.maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])
 print(b)

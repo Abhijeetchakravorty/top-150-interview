@@ -8,8 +8,7 @@ To do: Given an integer array nums,
 var threeSum = function (nums) {
     nums.sort((a, b) => a - b);
     const arr = [];
-    for ([i, a] of nums.entries()) {
-        // console.log(nums[i]);
+    for (let [i, a] of nums.entries()) {
         if (i > 0 && a == nums[i - 1]) continue;
         let l = i + 1;
         let r = nums.length - 1;
