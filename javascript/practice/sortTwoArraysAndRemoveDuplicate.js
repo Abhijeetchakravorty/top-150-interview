@@ -1,5 +1,5 @@
 var sortData = function (arr1, arr2) {
-    let arr = [...new Set([...new Set(arr1), ...new Set(arr2)])];
+    const arr = [...new Set([...new Set(arr1), ...new Set(arr2)])];
     arr.sort((a, b) => {
         return a - b;
     });
