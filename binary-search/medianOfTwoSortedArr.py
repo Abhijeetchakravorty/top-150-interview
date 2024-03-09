@@ -1,5 +1,5 @@
 class Solution:
-    def findMedianSortedArray(self, nums1, nums2):
+    def findMedianSortedArrays(self, nums1, nums2):
         # Time Complexity: O(log(min(len(nums1), len(nums2))))
         # Space Complexity: O(1)
 
@@ -15,23 +15,24 @@ class Solution:
         # Ensure B is the longer array to simplify binary search
         if len(B) < len(A):
             A, B = B, A
-        
+
         # Initialize pointers for binary search within the longer array A
         l, r = 0, len(A) - 1
 
         # Binary search loop
         while True:
             # Calculate the midpoint index in array A
-            i = (l+r) // 2
+            i = (l + r) // 2
 
             # Calculate the corresponding index in array B based on the middle point
             j = half - i - 2
+            print("I:J:Half ", i, j, half)
 
             # Determine values of elements around midpoints in both arrays
             Aleft = A[i] if (i >= 0) else float("-infinity")
-            Aright = A[i+1] if (i+1) < len(A) else float("infinity")
+            Aright = A[i + 1] if (i + 1) < len(A) else float("infinity")
             Bleft = B[j] if (j >= 0) else float("-infinity")
-            Bright = B[j+1] if (j+1)  < len(B) else float("infinity")
+            Bright = B[j + 1] if (j + 1) < len(B) else float("infinity")
 
             # Check if the current partition is valid for finding the median
             if Aleft <= Bright and Bleft <= Aright:
@@ -48,6 +49,7 @@ class Solution:
             else:
                 # Adjust the search range in array A if the partition is not valid in the opposite direction
                 l = i + 1
+
 
 # Create an instance of the Solution class
 a = Solution()

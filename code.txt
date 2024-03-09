@@ -1,0 +1,33 @@
+1.  Contains duplicate --> check length for both
+2.  Valid Anagram --> Two hashmaps and compare count
+3.  Two Sum --> Find the complement
+4.  Group Anagram --> set char count in hashmap as key
+5.  TopKFrequentElements --> set frequency in hashtable key
+6.  ValidSudoku --> check if each value exists in rows, cols or squares[(r//3, c//3)] if found then return false else add to   
+    each row, col and squares
+7.  ProductOfArrayExceptSelf --> forward loop then reverse loop where we update an array with initial value 1
+8.  EncodeDecode --> create a new string with length + delimiters before, loop inside loop for decoded string using the length
+9.  LongestConsecutiveSequence --> think of a scale then run two nested loops in the first one  check if n-1 exists then 
+    second while loop if next elements exists in scale
+10. isPalindrome --> Two pointers where we run first loop in which we check if elem is not alphanum then we move left 
+    pointer and right pointer and then we check if char at l and r are same
+
+11. TwoSum2 --> left right pointers with curSum and then compare with target
+12. ThreeSum --> Sort first then run two loops 
+13. maxArea --> l, r pointer then check which side is greater then increase / decrease sides
+14. trapWater --> maxleft, maxright
+15. ValidParanthesis --> create a hash map store paranethesis then use stack
+16. minStack --> Create two stacks one normal stack and other min value stack
+17. Reverse Polish Notation --> use stack push to stack if a number comes else pop twice and perform math operation
+18. Generate paranthesis --> 
+19. Temperature
+20. carFleet
+21. maxHorizontalArea
+22. Binary search
+23. searchin2D Matrix
+24. Koko Eats Bananas
+25. minInRotatedSortedArray
+26. searchInRotatedSortedArray
+27. TimeBasedKeyValueStore
+27. medianofTwoSortedArrays
+
