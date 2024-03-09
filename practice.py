@@ -36,10 +36,27 @@ class Solution:
         ans = []
         obj = dict()
         for i in range(len(nums)):
+            if str(nums[i]) not in obj:
+                obj[str(nums[i])] = 0
             obj[str(nums[i])] += 1
+            ans.append([])
+        ans.append([])
 
-        print(obj)
+        for key, val in obj.items():
+            ans[int(val)].append(key)
+        for j in range(len(ans) - 1, 0, -1):
+            if k > 0:
+                for i in range(len(ans[j])):
+                    if k > 0:
+                        res.append(int(ans[j][i]))
+                        k -= 1
+                    else:
+                        break
+            else:
+                break
+        return res
 
 
 a = Solution()
-b = a.topKFrequent([1, 1, 1, 2, 2, 3], 2)
+b = a.topKFrequent([1], 1)
+print(b)
