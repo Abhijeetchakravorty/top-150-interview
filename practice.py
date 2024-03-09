@@ -38,6 +38,8 @@ class Solution:
         for i in range(len(nums)):
             obj[str(nums[i])] += 1
 
+        print(obj)
+
 
 a = Solution()
 b = a.topKFrequent([1, 1, 1, 2, 2, 3], 2)
