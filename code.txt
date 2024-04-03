@@ -29,5 +29,8 @@
 25. minInRotatedSortedArray
 26. searchInRotatedSortedArray
 27. TimeBasedKeyValueStore
-27. medianofTwoSortedArrays
+28. medianofTwoSortedArrays
+29. findMaxProfit
+30. lengthOfLongestSubstring
+31. repeatingCharacterReplacement
 
